@@ -1,8 +1,8 @@
-// Lazy load the BookList component
-import React, { Suspense } from "react";
+// src/app/page.js (Server Component)
+
 import Pagination from "./components/Pagination";
 import SearchFilter from "./components/SearchFilter";
-const BookList = React.lazy(() => import("./components/BookList"));
+import BookListWrapper from "./components/BookListWrapper"; // Client Component wrapper for BookList
 
 export default async function Home({ searchParams }) {
   const {
@@ -26,9 +26,7 @@ export default async function Home({ searchParams }) {
         <SearchFilter />
       </div>
       <div>
-        <Suspense fallback={<div>Loading books...</div>}>
-          <BookList books={books} total={total} />
-        </Suspense>
+        <BookListWrapper books={books} total={total} />
         {totalPages > 1 && (
           <Pagination currentPage={Number(page)} totalPages={totalPages} />
         )}
