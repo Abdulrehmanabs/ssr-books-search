@@ -1,0 +1,136 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
+
+span {
+  margin: auto 0;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #7a7a7a;
+}
+
+th,
+td {
+  padding: 10px 10px;
+}
+
+td {
+  text-align: center;
+  border-top: 1px solid #7a7a7a;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 20px;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.total-books {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.total-books > span {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 3px 10px;
+  background-color: #a9b9b6;
+  margin-inline-start: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.search-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-filter > input {
+  flex-basis: 200px;
+  flex-grow: 1;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  border: 1px solid #7a7a7a;
+  color: #171717;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
